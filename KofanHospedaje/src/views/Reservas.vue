@@ -115,4 +115,27 @@ export default {
     padding: 30px;
     width: 100%;
 }
+
+/* --- Estilos para los BADGES (Estados de Reserva) --- */
+
+/* ACEPTADA: Fondo verde claro y texto verde oscuro */
+.bg-success-light {
+    background-color: #35fc71 !important; /* Fondo verde claro */
+    color: black !important;          /* Texto verde oscuro */
+    font-weight: 600;
+}
+
+/* PENDIENTE: Fondo amarillo claro y texto marrón oscuro */
+.bg-warning-light {
+    background-color: #f5f111 !important; /* Fondo amarillo claro */
+    color: black !important;           /* Texto marrón oscuro */
+    font-weight: 600;
+}
+
+/* CANCELADA: Fondo rojo claro y texto rojo oscuro */
+.bg-danger-light {
+    background-color: #e60619 !important; /* Fondo rojo claro */
+    color: black!important;           /* Texto rojo oscuro */
+    font-weight: 600;
+}
 </style>
