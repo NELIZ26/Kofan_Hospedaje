@@ -8,12 +8,13 @@
     </main>
     <TheFooter/>
   </div>
+  <ReservaModal />
 </template>
 
 <script setup>
 import TheNavbar from './components/TheNavbar.vue';
 import TheFooter from './components/TheFooter.vue'
-
+import ReservaModal from './components/ReservaModal.vue';
 </script>
 
 <style>

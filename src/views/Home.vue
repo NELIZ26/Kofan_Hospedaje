@@ -8,8 +8,8 @@
         </h1>
         <div class="col-lg-6 mx-right">
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-right">
-            <button type="button" class="btn btn-info btn-lg px-4 gap-3">
-              Reserva Ahora
+            <button class="btn btn-success btn-lg" @click="reserva.openModal()">
+               Reserva Ahora
             </button>
           </div>
         </div>
@@ -278,5 +278,11 @@
     </main>
   </div>
 </template>
+
+<script setup> 
+import { useReservaStore } from '../stores/reserva.js';
+
+const reserva = useReservaStore();
+</script>
 
 <style></style>

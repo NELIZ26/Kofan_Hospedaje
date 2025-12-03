@@ -3,8 +3,10 @@ import { useAuthStore } from '../stores/auth'
 import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 
+
 const auth = useAuthStore()
 const router = useRouter()
+
 
 // Hacemos reactivas las propiedades del store
 const { isLogged, user } = storeToRefs(auth)
@@ -70,7 +72,7 @@ function logout() {
           </li>
 
           <!-- Si está logueado -->
-          <li v-else class="nav-item d-flex align-items-center">
+          <li v-else class="nav-item d-flex align-items-center" @click="router.push('/account')" style="cursor: pointer;">
             <span class="text-white me-3">
               <i class="fa fa-user-circle"></i> {{ user?.email }}
             </span>
