@@ -3,10 +3,10 @@
     <main class="container py-5">
       <div class="row justify-content-center">
         <div class="col-md-10">
-
+          
           <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="fw-bold">Reservas</h2>
-            <button class="btn btn-success" @click="crearReserva">
+            <button class="btn btn-success" @click="reserva.openModal">
               <i class="fa-solid fa-plus"></i> Crear Reserva
             </button>
           </div>
@@ -60,6 +60,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useReservaStore } from '../stores/reserva.js';
 
 // 1. Datos/Estado de la aplicación (Composition API - ref)
 const reservas = ref([
@@ -69,12 +70,7 @@ const reservas = ref([
 ]);
 
 // 2. Métodos (Funciones)
-const crearReserva = () => {
-  // En una aplicación real, aquí abrirías un modal/formulario
-  console.log("Acción: Abrir formulario para crear una nueva reserva.");
-  // Ejemplo de cómo agregar una reserva (para demostración)
-  // reservas.value.push({ id: Date.now(), nombre: 'NUEVA RESERVA', correo: 'test@mail.com', fecha: '2025-11-20', cantidad: 1 });
-};
+const reserva = useReservaStore()
 
 const editarReserva = (id) => {
   // En una aplicación real, aquí buscarías la reserva por ID y cargarías el formulario

@@ -1,12 +1,15 @@
 <script setup>
 import {routeLocationKey, useRouter} from 'vue-router'
+import { useAuthStore } from '../stores/auth'
 
 const handleLogout = () => {
   // Lógica de cierre de sesión: limpiar datos de usuario y redirigir al inicio
-  console.log('Cerrando sesión y redirigiendo...');
+  auth.logout()
+  router.push('/home')
   // Aquí se usaría Vue Router para la redirección
 };
 const router = useRouter()
+const auth = useAuthStore()
 </script>
 <template>
     <aside class=" sidebar">
@@ -22,7 +25,7 @@ const router = useRouter()
                     <router-link :to="{name:'account-avisos'}"><i class="fa-solid fa-envelope" style="color: #329bec;"></i> Avisos </router-link>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-dark" @click.prevent="handleLogout"><i class="fa-solid fa-right-from-bracket" style="color: #ec3232;"></i> Salir </a>
+                    <a href="#" @click.prevent="handleLogout"><i class="fa-solid fa-right-from-bracket" style="color: #ec3232;"></i> Salir </a>
                 </li>
             </ul>
         </nav>

@@ -24,17 +24,12 @@ const routes = [
   // fallback: cualquier ruta no encontrada redirige a home
   { path: "/:pathMatch(.*)*", redirect: "/home" },
   {
-    path: "/",
-    name: "root-redirect",
-    redirect: "/account/datos",
-  },
-  {
     path: "/account",
     name: "account",
     component: AccountView,
     children: [
       {
-        path: "",
+        path: "/account",
         redirect: { name: "account-datos" },
       },
       {
@@ -68,7 +63,7 @@ const router = createRouter({
 
 router.beforeEach((to) => {
   const auth = useAuthStore();
-  if (to.meta.requiresAuth && !auth.isLogged) return "/";
+  if (to.meta.requiresAuth && !auth.isLogged) {console.log('Redireccionando'); return "/";}
 });
 
 export default router;

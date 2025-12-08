@@ -13,7 +13,7 @@ const { isLogged, user } = storeToRefs(auth)
 console.log(isLogged);
 function logout() {
   auth.logout()
-  router.push('/login')
+  router.push('/home')
 }
 
 </script>
@@ -72,8 +72,8 @@ function logout() {
           </li>
 
           <!-- Si está logueado -->
-          <li v-else class="nav-item d-flex align-items-center" @click="router.push('/account')" style="cursor: pointer;">
-            <span class="text-white me-3">
+          <li v-else class="nav-item d-flex align-items-center">
+            <span class="text-white me-3" @click="router.push('/account')" style="cursor: pointer;">
               <i class="fa fa-user-circle"></i> {{ user?.email }}
             </span>
 
