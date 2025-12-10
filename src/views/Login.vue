@@ -1,11 +1,11 @@
 <template>
-   <main class="form-signin m-auto my-5 mx-5 text-center" id="login">
-      <form @submit.prevent="submit">
+   <main class="m-auto my-5 mx-5" id="login">
+      <form @submit.prevent="submit" class="form_container px-4 my-2 py-md-3px-4 my-2 py-md-3">
 
-        <img class="mb-4 mx-auto" src="../images/login.png" alt="" width="75" height="75">
+        <img class="mt-4 mb-4 mx-auto" src="../images/login.png" alt="" width="75" height="75">
         <h1 class="h3 mb-3 fw-normal" id="titulo 1">Iniciar Sesión</h1>
 
-        <div class="form-floating w-50 mx-auto">
+        <div class="form-floating w-75 mx-auto">
           <input 
             v-model="email" 
             type="email" 
@@ -17,7 +17,7 @@
           <h3 class="h6 text-end fst-italic">Olvidaste tu Correo</h3>
         </div>
 
-        <div class="form-floating w-50 mx-auto">
+        <div class="form-floating w-75 mx-auto">
           <input 
             v-model="password" 
             type="password" 
@@ -29,19 +29,19 @@
           <h3 class="h6 text-end fst-italic">Olvidaste tu Contraseña</h3>
         </div>
 
-        <div class="form-check text-start my-3 mx-auto w-50">
+        <div class="form-check text-start my-3 mx-auto w-75">
           <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
             Recuérdame
           </label>
         </div>
 
-        <button class="btn btn-primary w-50 py-2" type="submit">
+        <button class="btn btn-primary w-75 py-2" type="submit">
           Iniciar Sesión
         </button>
 
         
-        <h3 class="h6 text-center fst-italic mt-3">
+        <h3 class="h6 text-center fst-italic mt-3 mb-4">
           ¿No tienes una cuenta?
           <router-link to="/Register">
              <span 
@@ -88,5 +88,20 @@ function irARegistro(){
 img{
   display: flex;
   align-items: center;
+}
+.form_container {
+  width: content;
+  height: content;
+  max-width: 563px;
+  max-height: 613px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+    0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+    0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }
 </style>

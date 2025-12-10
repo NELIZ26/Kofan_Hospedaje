@@ -1,21 +1,21 @@
-import { defineStore } from 'pinia';
-import { ref, reactive, computed } from 'vue';
+import { defineStore } from "pinia";
+import { ref, reactive, computed } from "vue";
 
-export const useReservaStore = defineStore('reserva', () => {
+export const useReservaStore = defineStore("reserva", () => {
   const isModalOpen = ref(false);
   const showSuccess = ref(false);
-  const personType = ref('natural');
+  const personType = ref("natural");
 
   const form = reactive({
-    nombres: '',
-    tipoDocumento: '',
-    correo: '',
-    fechaNacimiento: '',
-    numDocumento: '',
-    telefono: '',
-    cantidadPersonas: '2',
-    habitacion: 'Cabana2',
-    fechaReserva: ''
+    nombres: "",
+    tipoDocumento: "",
+    correo: "",
+    fechaNacimiento: "",
+    numDocumento: "",
+    telefono: "",
+    cantidadPersonas: "2",
+    habitacion: "Cabana2",
+    fechaReserva: "",
   });
 
   const errors = reactive({
@@ -25,35 +25,35 @@ export const useReservaStore = defineStore('reserva', () => {
     fechaNacimiento: false,
     numDocumento: false,
     telefono: false,
-    fechaReserva: false
+    fechaReserva: false,
   });
 
   const minDate = computed(() => {
-    return new Date().toISOString().split('T')[0];
+    return new Date().toISOString().split("T")[0];
   });
 
-  const labelNombres = computed(() => 
-    personType.value === 'juridica' ? 'Razón Social' : 'Nombres y Apellidos'
+  const labelNombres = computed(() =>
+    personType.value === "juridica" ? "Razón Social" : "Nombres y Apellidos"
   );
 
-  const placeholderNombres = computed(() => 
-    personType.value === 'juridica' ? 'Ej: Empresa SAS' : 'Ej: Juan Pérez'
+  const placeholderNombres = computed(() =>
+    personType.value === "juridica" ? "Ej: Empresa SAS" : "Ej: Juan Pérez"
   );
 
-  const labelNumDoc = computed(() => 
-    personType.value === 'juridica' ? 'NIT' : 'Número de Documento'
+  const labelNumDoc = computed(() =>
+    personType.value === "juridica" ? "NIT" : "Número de Documento"
   );
 
   const resetForm = () => {
-    Object.keys(form).forEach(key => form[key] = '');
-    form.cantidadPersonas = '2';
-    form.habitacion = 'Cabana2';
-    personType.value = 'natural';
+    Object.keys(form).forEach((key) => (form[key] = ""));
+    form.cantidadPersonas = "2";
+    form.habitacion = "Cabana2";
+    personType.value = "natural";
     clearErrors();
   };
 
   const clearErrors = () => {
-    Object.keys(errors).forEach(key => errors[key] = false);
+    Object.keys(errors).forEach((key) => (errors[key] = false));
   };
 
   const validateForm = () => {
@@ -65,7 +65,7 @@ export const useReservaStore = defineStore('reserva', () => {
       isValid = false;
     }
 
-    if (personType.value === 'natural' && !form.tipoDocumento) {
+    if (personType.value === "natural" && !form.tipoDocumento) {
       errors.tipoDocumento = true;
       isValid = false;
     }
@@ -76,7 +76,7 @@ export const useReservaStore = defineStore('reserva', () => {
       isValid = false;
     }
 
-    if (personType.value === 'natural' && !form.fechaNacimiento) {
+    if (personType.value === "natural" && !form.fechaNacimiento) {
       errors.fechaNacimiento = true;
       isValid = false;
     }
@@ -113,7 +113,7 @@ export const useReservaStore = defineStore('reserva', () => {
 
   const handleSubmit = () => {
     if (validateForm()) {
-      console.log('Formulario válido:', form);
+      console.log("Formulario válido:", form);
       showSuccess.value = true;
       resetForm();
     }
@@ -138,6 +138,6 @@ export const useReservaStore = defineStore('reserva', () => {
     closeModal,
     setPersonType,
     handleSubmit,
-    closeSuccessMessage
+    closeSuccessMessage,
   };
 });

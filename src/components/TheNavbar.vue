@@ -10,7 +10,7 @@ const router = useRouter()
 
 // Hacemos reactivas las propiedades del store
 const { isLogged, user } = storeToRefs(auth)
-console.log(isLogged);
+//console.log(isLogged);
 function logout() {
   auth.logout()
   router.push('/home')
@@ -99,7 +99,7 @@ function logout() {
   left: 0;
   z-index: 1030;
   box-sizing: border-box;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.632);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   
 }
 </style>

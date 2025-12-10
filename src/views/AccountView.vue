@@ -1,19 +1,19 @@
 <script setup>
-import SidebarNav from './SidebarNav.vue';
+import SidebarNav from "./SidebarNav.vue";
 </script>
 
 <template>
   <div class="account-layout-container">
-    <SidebarNav/>
+    <SidebarNav />
     <div class="account-content-area">
-      <router-view/>
+      <router-view />
     </div>
   </div>
 </template>
 <style scoped>
 /* Aplicamos Flexbox para el layout de dos columnas */
 .account-layout-container {
-  display: flex; 
+  display: flex;
   width: 100%;
 }
 

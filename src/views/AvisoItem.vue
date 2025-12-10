@@ -71,7 +71,12 @@ const getIconClass = (categoria) => {
 </style>-->
 
 <template>
-  <div class="aviso-item shadow-sm mb-3" :data-categoria="aviso.categoria" :data-id="aviso.id" :class="{ 'aviso-leido': aviso.leido }">
+  <div
+    class="aviso-item shadow-sm mb-3"
+    :data-categoria="aviso.categoria"
+    :data-id="aviso.id"
+    :class="{ 'aviso-leido': aviso.leido }"
+  >
     <div class="aviso-left">
       <i :class="getIconClass(aviso.categoria)" class="aviso-icon"></i>
     </div>
@@ -80,21 +85,43 @@ const getIconClass = (categoria) => {
         <div>
           <h5 class="aviso-titulo">{{ aviso.titulo }}</h5>
           <p class="aviso-text small mb-0">{{ aviso.texto }}</p>
-          <div class="meta small text-muted mt-2"><i class="fa-regular fa-clock"></i> {{ aviso.tiempo }}</div>
+          <div class="meta small text-muted mt-2">
+            <i class="fa-regular fa-clock"></i> {{ aviso.tiempo }}
+          </div>
         </div>
 
         <div class="aviso-actions text-end">
-          <div class="etiqueta-et"> 
-            <span v-if="!aviso.leido && aviso.categoria === 'reservas'" class="etiqueta etiqueta-nuevo">Nuevo</span>
-            <span v-else-if="aviso.categoria === 'promocion'" class="etiqueta etiqueta-promocion">Promoción</span>
+          <div class="etiqueta-et">
+            <span
+              v-if="!aviso.leido && aviso.categoria === 'reservas'"
+              class="etiqueta etiqueta-nuevo"
+              >Nuevo</span
+            >
+            <span
+              v-else-if="aviso.categoria === 'promocion'"
+              class="etiqueta etiqueta-promocion"
+              >Promoción</span
+            >
             <span v-else class="etiqueta etiqueta-info">Info</span>
           </div>
           <div class="mt-2">
-            <a href="#" class="accion marcar-leido" @click.prevent="$emit('marcar', aviso.id)">
-              <i :class="aviso.leido ? 'fa-solid fa-eye-slash' : 'fa-regular fa-eye'"></i> 
-              {{ aviso.leido ? 'Marcar como no leído' : 'Marcar como leído' }}
+            <a
+              href="#"
+              class="accion marcar-leido"
+              @click.prevent="$emit('marcar', aviso.id)"
+            >
+              <i
+                :class="
+                  aviso.leido ? 'fa-solid fa-eye-slash' : 'fa-regular fa-eye'
+                "
+              ></i>
+              {{ aviso.leido ? "Marcar como no leído" : "Marcar como leído" }}
             </a>
-            <a href="#" class="accion text-danger ms-3 eliminar-aviso" @click.prevent="$emit('eliminar', aviso.id)">
+            <a
+              href="#"
+              class="accion text-danger ms-3 eliminar-aviso"
+              @click.prevent="$emit('eliminar', aviso.id)"
+            >
               <i class="fa-solid fa-trash"></i> Eliminar
             </a>
           </div>
@@ -105,7 +132,7 @@ const getIconClass = (categoria) => {
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
+import { defineProps, defineEmits } from "vue";
 
 // Define las props y los eventos que emite
 const props = defineProps({
@@ -115,19 +142,19 @@ const props = defineProps({
   },
 });
 
-const emits = defineEmits(['marcar', 'eliminar']); // Definición de los eventos
+const emits = defineEmits(["marcar", "eliminar"]); // Definición de los eventos
 
 // Lógica para determinar el ícono de Font Awesome
 const getIconClass = (categoria) => {
   switch (categoria) {
-    case 'reservas':
-      return 'fa-solid fa-crown'; 
-    case 'promocion':
-      return 'fa-solid fa-percent';
-    case 'actividades':
-      return 'fa-solid fa-campground'; 
+    case "reservas":
+      return "fa-solid fa-crown";
+    case "promocion":
+      return "fa-solid fa-percent";
+    case "actividades":
+      return "fa-solid fa-campground";
     default:
-      return 'fa-solid fa-info-circle';
+      return "fa-solid fa-info-circle";
   }
 };
 </script>

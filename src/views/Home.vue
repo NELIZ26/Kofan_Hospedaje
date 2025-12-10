@@ -9,7 +9,7 @@
         <div class="col-lg-6 mx-right">
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-right">
             <button class="btn btn-success btn-lg" @click="reserva.openModal()">
-               Reserva Ahora
+              Reserva Ahora
             </button>
           </div>
         </div>
@@ -85,66 +85,41 @@
           mollitia totam sunt, optio pariatur nobis facilis quaerat!
         </p>
       </div>
-
-      <div class="container-fluid justify-content-center row pb-5" id="cardCarrusel">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              <h2 class="text-center"><strong>Hospedaje</strong></h2>
-            </div>
+      <div
+        class="container"
+        id="sect_card"
+      >
+        <div id="card" class="col-md-4">
+          <div id="picture">
             <div
-              id="carruselHabitaciones"
+              id="carruselHospedaje"
               class="carousel slide"
               data-bs-ride="carousel"
             >
               <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                  <img
-                    src="../images/habitacion1.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+                <div class="carousel-item active" data-bs-interval="2000">
+                  <img src="../images/habitacion1.jpg" alt="..." />
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                  <img
-                    src="../images/habitacion2.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="../images/habitacion3.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+                  <img src="../images/habitacion2.jpg" alt="..." />
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                  <img
-                    src="../images/habitacion4.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="../images/habitacion5.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+                  <img src="../images/habitacion3.jpg" alt="..." />
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                  <img
-                    src="../images/habitacion6.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+                  <img src="../images/habitacion4.jpg" alt="..." />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="../images/habitacion5.jpg" alt="..." />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="../images/habitacion6.jpg" alt="..." />
                 </div>
               </div>
               <button
                 class="carousel-control-prev"
                 type="button"
-                data-bs-target="#carruselHabitaciones"
+                data-bs-target="#carruselHospedaje"
                 data-bs-slide="prev"
               >
                 <span
@@ -156,7 +131,7 @@
               <button
                 class="carousel-control-next"
                 type="button"
-                data-bs-target="#carruselHabitaciones"
+                data-bs-target="#carruselHospedaje"
                 data-bs-slide="next"
               >
                 <span
@@ -166,72 +141,52 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-            <div class="card-body">
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut
-                iusto dolorum omnis nemo culpa eius. Nostrum necessitatibus eum,
-                autem omnis, esse impedit sed eaque dolor reiciendis, libero in
-                repudiandae ullam.
-              </p>
-              <button class="btn btn-outline-primary col-6" type="button">
+          </div>
+          <div>
+            <h5 id="titulo">Hospedaje</h5>
+            <p id="contenid">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
+              sed odio aliquam nesciunt rerum vero qui, laudantium, amet hic
+              libero, corporis minima exercitationem magni commodi possimus
+              suscipit perferendis reiciendis tempore.
+            </p>
+          </div>
+          <div class="p-6 pt-0">
+            <router-link :to="{ name: 'Cabanas' }">
+              <button class="btn-card" type="button">
                 Ver mas...
               </button>
-            </div>
+            </router-link>
           </div>
         </div>
-        <div class="col-1"></div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              <h2 class="text-center"><strong>Eventos</strong></h2>
-            </div>
+
+        <div class="mx-3 mx-md-5"></div>
+
+        <div id="card" class="col-md-4">
+          <div id="picture">
             <div
               id="carruselEventos"
               class="carousel slide"
               data-bs-ride="carousel"
             >
               <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                  <img
-                    src="../images/eventos1.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+                <div class="carousel-item active" data-bs-interval="2000">
+                  <img src="../images/eventos1.jpg" alt="..." />
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                  <img
-                    src="../images/eventos2.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="../images/eventos3.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+                  <img src="../images/eventos2.jpg" alt="..." />
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                  <img
-                    src="../images/eventos4.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="../images/eventos5.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+                  <img src="../images/eventos3.jpg" alt="..." />
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                  <img
-                    src="../images/eventos6.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+                  <img src="../images/eventos4.jpg" alt="..." />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="../images/eventos5.jpg" alt="..." />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="../images/eventos6.jpg" alt="..." />
                 </div>
               </div>
               <button
@@ -259,19 +214,20 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-            <div class="card-body">
-              <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut
-                iusto dolorum omnis nemo culpa eius. Nostrum necessitatibus eum,
-                autem omnis, esse impedit sed eaque dolor reiciendis, libero in
-                repudiandae ullam.
-              </p>
-              <p>
-                  <a class="btn btn-outline-primary col-6" type="button">
-                    Ver mas...
-                  </a>
-                </p>
-            </div>
+          </div>
+          <div>
+            <h5 id="titulo">Eventos</h5>
+            <p id="contenid">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
+              sed odio aliquam nesciunt rerum vero qui, laudantium, amet hic
+              libero, corporis minima exercitationem magni commodi possimus
+              suscipit perferendis reiciendis tempore.
+            </p>
+          </div>
+          <div class="p-6 pt-0">
+            <button class="btn-card" data-ripple-light="true" type="button">
+              Ver mas...
+            </button>
           </div>
         </div>
       </div>
@@ -279,10 +235,86 @@
   </div>
 </template>
 
-<script setup> 
-import { useReservaStore } from '../stores/reserva.js';
+<script setup>
+import { useReservaStore } from "../stores/reserva.js";
 
 const reserva = useReservaStore();
 </script>
 
-<style></style>
+<style>
+#sect_card {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  
+}
+#card {
+  margin: auto;
+  max-width: 563px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  background-color: rgb(178, 178, 178);
+  background-clip: border-box;
+  color: rgb(55 65 81);
+  box-shadow: 0 4px 6px -1px rgba(0 0 0 / 0.1), 0 2px 4px -2px rgba(0 0 0 / 0.1);
+}
+#picture {
+  position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: -1.5rem;
+  min-height: 208px;
+  min-width: 260px;
+  border-radius: 0.75rem;
+  background-color: #3b82f6;
+  background-clip: border-box;
+  color: rgb(255 255 255);
+  box-shadow: 0 10px 15px -3px rgba(0 0 0 / 0.1),
+    0 4px 6px -4px rgba(0 0 0 / 0.1), 0 20px 25px -5px rgba(0 0 0 / 0.1),
+    0 8px 10px -6px rgba(0 0 0 / 0.1);
+  overflow: hidden;
+}
+#card h5 {
+  display: block;
+  font-size: 28px;
+  padding: 3rem;
+  padding-bottom: 0%;
+  font-weight: bold !important;
+  line-height: 1.625;
+}
+#card p {
+  display: block;
+  font-size: 18px;
+  padding: 2rem;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+.btn-card {
+  display: block;
+  margin: auto;
+  background-color: #3b82f6;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#carruselEventos {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+#carruselEventos .carousel-inner,
+#carruselEventos .carousel-item,
+#carruselEventos img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+</style>

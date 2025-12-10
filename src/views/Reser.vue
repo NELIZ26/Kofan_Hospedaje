@@ -1,5 +1,6 @@
 <template>
   <div id="app-kofan">
+    <SidebarNav/>
     <main class="container py-5">
       <div class="row justify-content-center">
         <div class="col-md-10">
@@ -61,6 +62,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useReservaStore } from '../stores/reserva.js';
+import SidebarNav from './SidebarNav.vue';
 
 // 1. Datos/Estado de la aplicación (Composition API - ref)
 const reservas = ref([
@@ -84,9 +86,6 @@ const eliminarReserva = (id) => {
   // reservas.value = reservas.value.filter(r => r.id !== id);
 };
 
-const iniciarSesion = () => {
-    console.log("Acción: Redirigir a la página de inicio de sesión.");
-}
 
 // Opcional: Si quieres exponer las variables y funciones para que puedan ser usadas en el template,
 // en el setup de <script setup> no es necesario, ya que son automáticamente expuestas.
@@ -97,14 +96,7 @@ const iniciarSesion = () => {
 /* Estilos específicos que tenías en la etiqueta <style> del HTML */
 #app-kofan {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* Nota: La fuente 'Poppins' y los estilos de Bootstrap deben estar cargados globalmente
-     o en este componente si no usas un archivo CSS externo. */
   font-family: 'Forum';
-}
-main {
-  flex: 1; /* Esto empuja el footer hacia abajo */
 }
 
 

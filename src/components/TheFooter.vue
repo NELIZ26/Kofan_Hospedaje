@@ -1,19 +1,5 @@
-<script setup>
-import { useAuthStore } from "../stores/auth";
-import { useRouter } from "vue-router";
-import { storeToRefs } from "pinia";
+<script setup></script>
 
-const auth = useAuthStore();
-const router = useRouter();
-
-// Hacemos reactivas las propiedades del store
-const { isLogged, user } = storeToRefs(auth);
-console.log(isLogged);
-function logout() {
-  auth.logout();
-  router.push("/login");
-}
-</script>
 <template>
   <div class="container-fluid" id="piedepagina">
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
@@ -27,7 +13,6 @@ function logout() {
           <li>E-mail: loreamimpusn@gmail.com</li>
           <li>Kilometro 3 Vereda Negras | Puerto Asis | Putumayo</li>
         </ul>
-        <p class="text-body-secondary">© 2025</p>
       </div>
 
       <div class="col" id="blanco"></div>
@@ -93,6 +78,13 @@ function logout() {
           ></iframe>
         </div>
       </div>
+      <hr />
+      <div>
+        <small
+          >© {{ new Date().getFullYear() }} Ecoturístico Kofan — Todos los
+          derechos reservados</small
+        >
+      </div>
     </footer>
   </div>
 </template>
@@ -112,7 +104,10 @@ function logout() {
   width: auto;
   text-align: center;
 }
-#menu{
+#menu {
   text-align: center;
+}
+small {
+  display: inline-block;
 }
 </style>

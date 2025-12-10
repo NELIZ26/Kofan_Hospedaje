@@ -11,6 +11,7 @@ import Reservas from "../views/Reservas.vue";
 import AccountView from "../views/AccountView.vue";
 import Avisos from "../views/Avisos.vue";
 import Reser from "../views/Reser.vue";
+import Cabanas from "../views/Cabanas.vue";
 
 
 const routes = [
@@ -23,6 +24,7 @@ const routes = [
   { path: '/usuarios/:id/editar', component: UsersEdit, meta: { requiresAuth: true } },*/
   // fallback: cualquier ruta no encontrada redirige a home
   { path: "/:pathMatch(.*)*", redirect: "/home" },
+  { path: "/Cabanas", name: 'Cabanas', component: Cabanas},
   {
     path: "/account",
     name: "account",
