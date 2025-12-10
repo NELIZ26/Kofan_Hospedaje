@@ -61,6 +61,9 @@ footer{
     font-size: 18px;
     margin-top: 50px;
 }
+#seccionS h3{
+    line-height: 1.625;
+}
 #seccionOb{
     display: flex;
     padding-left: 150px;
@@ -71,9 +74,11 @@ footer{
 }
 #seccionOb h3{
     font-family:'Rock Salt' ;
+    line-height: 1.625;
 }
 #seccionOb1 h3{
     font-family:'Rock Salt' ;
+    line-height: 1.625;
 }
 #seccionOb .col-lg-4{
     display: flex;
@@ -96,9 +101,11 @@ footer{
     justify-content: center;
     text-align: center;
     padding-top: 150px;
+    
 }
 #seccionNS .display-5 strong {
   font-weight: bold !important;
+  line-height: 1.625;
 }
 
 #seccion .col-lg-8{
@@ -114,22 +121,166 @@ footer{
     padding: 0.5rem;
     margin: 0;
 }
-#cardCarrusel{
+/*//////////////////*/
+.main-content {
+    padding: 30px;
+}
+
+
+/* Estilo para el botón de Confirmar */
+.btn-confirmar {
+    background-color: #6AC267; /* Verde similar al mockup */
+    border-color: #6AC267;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn-confirmar:hover {
+    background-color: #5BAA58;
+    border-color: #5BAA58;
+    color: white;
+}
+
+/* Ajuste para el nombre de la cuenta */
+.account-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+
+/* --- ESTILOS COMPARTIDOS (Navbar, Sidebar, Footer) --- */
+.header-top {
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-kofan {
+    font-size: 28px;
+    font-weight: bold;
+    color: #C33B3D; /* Rojizo */
+    font-family: Arial, sans-serif;
+}
+
+
+/* 🚀 Estilos para la clase activa (active-link) 🚀 */
+.active-link {
+  /* Por ejemplo, poner el texto azul vibrante */
+  color: #007bff !important; 
+  /* O cambiar el fondo para resaltar */
+  background-color: #e9f5ff; 
+  /* Hacer la fuente más gruesa */
+  font-weight: bold; 
+  /* Añadir un borde a la izquierda o derecha */
+  border-left: 4px solid #007bff;
+  padding-left: 10px; /* Ajustar el padding por el borde */
+}
+
+.main-content {
+    padding: 30px;
+}
+
+.account-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+/* Estilos del formulario de búsqueda */
+.search-form {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+
+.btn {
+    /* Base style for all custom buttons */
+    border-radius: 8px; /* Esquinas ligeramente más redondeadas */
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-limpiar, .btn-filtrar {
+
+    color: #000500; /* Texto oscuro para buen contraste */
+    border: 1px solid #5c5e5a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+/* Estilos para los botones de acción */
+.btn-limpiar, .btn-reservar {
+    padding: 8px 20px;
+}
+.btn-limpiar:hover, .btn-filtrar:hover, .btn-reservar:hover {
+    background-color: #5c5e5a;
+    color: #000500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.btn-reservar {
+    /* Color de fondo: Verde bosque oscuro (Destaca como acción principal) */
+    color: #000500;
+    border: 1px solid #5c5e5a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);*/
+}
+
+
+
+/* Estilos para la tabla */
+.table thead th {
+    border-bottom: 2px solid #ddd;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    color: #555;
+    vertical-align: middle; /* Para alinear el icono con el texto */
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.table-detalle {
+    font-size: 0.9em;
+    color: #666;
     display: flex;
-    align-items: center;
-}
-#cardCarrusel .d-block{
-    width: 100px; 
-    height: 450px;
-    padding: 10px;
-    border-radius: 5%;
-}
-#cardCarrusel .card-body{
-    text-align: center;
-    padding: 1.25rem;
-}
-#cardCarrusel .card{
-    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: right;
+}
+.table-detalle strong {
+    color: #333;
+}
+
+/* Estilos de las etiquetas de Estado */
+.badge {
+    font-size: 0.85em;
+    padding: 0.5em 1em;
+    font-weight: 600;
+}
+
+.bg-success-light {
+    background-color: #2af723 !important; /* Verde muy claro */
+    color: #000500 !important; /* Verde oscuro */
+}
+
+.bg-warning-light {
+    background-color: #e8f346 !important; /* Amarillo muy claro */
+    color: #050400 !important; /* Naranja/marrón */
+}
+
+.bg-danger-light {
+    background-color: #f85353 !important; /* Rojo muy claro */
+    color: #080303 !important; /* Rojo oscuro */
 }
