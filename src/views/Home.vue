@@ -8,7 +8,7 @@
         </h1>
         <div class="col-lg-6 mx-right">
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-right">
-            <button class="btn btn-success btn-lg" @click="reserva.openModal()">
+            <button class="btn btn-primary resevabutton" @click="reserva.openModal()">
               Reserva Ahora
             </button>
           </div>
@@ -247,7 +247,6 @@ const reserva = useReservaStore();
   justify-content: center;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
-  
 }
 #card {
   margin: auto;
@@ -256,7 +255,7 @@ const reserva = useReservaStore();
   display: flex;
   flex-direction: column;
   border-radius: 0.75rem;
-  background-color: rgb(178, 178, 178);
+  background-color: #E3F2FD;
   background-clip: border-box;
   color: rgb(55 65 81);
   box-shadow: 0 4px 6px -1px rgba(0 0 0 / 0.1), 0 2px 4px -2px rgba(0 0 0 / 0.1);
@@ -295,7 +294,7 @@ const reserva = useReservaStore();
 .btn-card {
   display: block;
   margin: auto;
-  background-color: #3b82f6;
+  background-color: #1E88E5;
   border-radius: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -303,6 +302,11 @@ const reserva = useReservaStore();
   padding-bottom: 0.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.reservabutton{
+  background-color: #1E88E5;
+  width: 1rem;
+  height: 1rem;
 }
 #carruselEventos {
   width: 100%;

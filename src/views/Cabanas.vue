@@ -4,26 +4,23 @@
       <h1>Cabañas</h1>
       <p>Elige una de nuestras cabañas y reserva tu estancia fácilmente.</p>
 
+      <div id="navbtn">
+        <button type="button" class="btn btn-limpiar me-2">Cabañas</button>
+        <button type="button" class="btn btn-filtrar me-2">
+          Habitaciones
+        </button>
+      </div>
+
       <div class="cards">
-        <div
-          v-for="c in cabins"
-          :key="c.id"
-          id="card-cat"
-        >
+        <div v-for="c in cabins" :key="c.id" id="card-cat">
           <h3>{{ c.name }}</h3>
           <p>{{ c.description }}</p>
           <div id="columnas">
             <div id="desc">
-              <span
-                >👥 {{ c.capacity }} personas</span
-              >
+              <span>👥 {{ c.capacity }} personas</span>
               <span>${{ c.price }}/noche</span>
             </div>
-            <button
-              class="btn-1"
-            >
-              Reservar
-            </button>
+            <button class="btn-1" @click="reserva.openModal()">Reservar</button>
           </div>
         </div>
       </div>
@@ -32,6 +29,9 @@
 </template>
 
 <script setup>
+import { useReservaStore } from "../stores/reserva.js";
+const reserva = useReservaStore();
+
 const cabins = [
   {
     id: 1,
@@ -104,54 +104,63 @@ const cabins = [
 </script>
 
 <style scoped>
-#contenido1{
+#contenido1 {
   justify-items: center;
 }
+
 #catalogoH {
   margin: 2rem;
   border-radius: 0.75rem;
   padding: 2rem;
   justify-content: center;
   align-items: center;
-  background-color: beige;
+  background-color: #e3f2fd;
   box-shadow: 0 10px 15px -3px rgba(0 0 0 / 0.1),
     0 4px 6px -4px rgba(0 0 0 / 0.1), 0 20px 25px -5px rgba(0 0 0 / 0.1),
     0 8px 10px -6px rgba(0 0 0 / 0.1);
 }
+
 #catalogoH h1 {
   font-size: 38px;
 }
+
 #catalogoH p {
   font-size: 18px;
 }
+
 .cards {
   display: grid;
   gap: 1rem;
   margin-top: 1.5rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-#card-cat{
-  border-radius: 0.50rem;
+
+#card-cat {
+  border-radius: 0.5rem;
   padding: 1rem;
   background-color: #d0fdd7;
   box-shadow: 0 10px 15px -3px rgba(0 0 0 / 0.1),
     0 4px 6px -4px rgba(0 0 0 / 0.1), 0 20px 25px -5px rgba(0 0 0 / 0.1),
     0 8px 10px -6px rgba(0 0 0 / 0.1);
 }
-#card-cat h3{
+
+#card-cat h3 {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
-#card-cat p{
+
+#card-cat p {
   margin-bottom: 1rem;
   font-size: 18px;
 }
-#card-cat span{
+
+#card-cat span {
   margin-right: 1rem;
   display: inline-block;
 }
-#card-cat .btn-1{
+
+#card-cat .btn-1 {
   background-color: green;
   color: white;
   padding-top: 0.5rem;
@@ -160,9 +169,14 @@ const cabins = [
   padding-right: 1rem;
   border-radius: 0.5rem;
 }
-#columnas{
+
+#columnas {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#navbtn{
+  padding-top: 1rem;
 }
 </style>

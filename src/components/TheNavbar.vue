@@ -52,7 +52,7 @@ function logout() {
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/servicios" class="nav-link">
+            <router-link to="/Services" class="nav-link">
               <i class="bi bi-house-gear-fill me-1"></i> Servicios
             </router-link>
           </li>

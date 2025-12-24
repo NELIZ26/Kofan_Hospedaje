@@ -12,6 +12,8 @@ import AccountView from "../views/AccountView.vue";
 import Avisos from "../views/Avisos.vue";
 import Reser from "../views/Reser.vue";
 import Cabanas from "../views/Cabanas.vue";
+import Contacto from "../views/Contacto.vue";
+import Services from "../views/Services.vue";
 
 
 const routes = [
@@ -25,6 +27,8 @@ const routes = [
   // fallback: cualquier ruta no encontrada redirige a home
   { path: "/:pathMatch(.*)*", redirect: "/home" },
   { path: "/Cabanas", name: 'Cabanas', component: Cabanas},
+  { path: "/Contacto", name: 'Contacto', component: Contacto},
+  { path: "/Services", name: 'Services', component: Services},
   {
     path: "/account",
     name: "account",
