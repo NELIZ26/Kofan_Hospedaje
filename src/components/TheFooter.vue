@@ -104,6 +104,9 @@
   padding-top: 3rem;
   padding-left: 1rem;
 }
+#piedepagina{
+  margin-top: 2rem;
+}
 .navbar-brand {
   font-weight: 700;
 }

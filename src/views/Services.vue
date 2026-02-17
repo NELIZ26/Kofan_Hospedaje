@@ -5,7 +5,35 @@
         <div class="card__shine"></div>
         <div class="card__glow"></div>
         <div class="card__content">
-          <div class="card__badge">NEW</div>
+          <div style="--bg-color: #a78bfa" class="card__image">
+            <img src="../images/Servicios.jpg" alt="">
+          </div>
+          <div class="card__text">
+            <p class="card__title">Hospedaje</p>
+            <p class="card__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, rem. Vero ducimus optio velit temporibus laudantium modi error tenetur explicabo. Sapiente vel, laboriosam voluptate saepe ad voluptates obcaecati exercitationem voluptas?</p>
+          </div>
+          <div class="card__footer">
+            <div class="card__price">Reserva ahora</div>
+            <div class="card__button" @click="reserva.openModal()">
+              <svg height="16" width="16" viewBox="0 0 24 24">
+                <path
+                  stroke-width="2"
+                  stroke="currentColor"
+                  d="M4 12H20M12 4V20"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="cardp">
+        <div class="card__shine"></div>
+        <div class="card__glow"></div>
+        <div class="card__content">
           <div style="--bg-color: #a78bfa" class="card__image">
             <img src="../images/Servicios.jpg" alt="">
           </div>
@@ -97,21 +125,6 @@ section{
   gap: 0.75em;
   position: relative;
   z-index: 2;
-}
-
-.card__badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: #10b981;
-  color: white;
-  padding: 0.25em 0.5em;
-  border-radius: 999px;
-  font-size: 0.7em;
-  font-weight: 600;
-  transform: scale(0.8);
-  opacity: 0;
-  transition: all 0.4s ease 0.1s;
 }
 
 .card__image {

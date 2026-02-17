@@ -63,7 +63,7 @@
 
 .contact-container {
   max-width: 1100px;
-  margin: auto;
+  margin-bottom: 1000px;
   margin-bottom: 2rem;
   padding: 4rem;
   box-sizing: border-box;
@@ -71,10 +71,10 @@
 
 
 .contact-title {
-  font-size: 1.875rem; 
+  font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: #047857; 
+  color: #047857;
 }
 
 
@@ -162,13 +162,12 @@
 }
 
 #cardContacto {
-  width: content;
-  height: content;
+  max-width: 1100px;
   margin: auto;
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #e3f2fd;
   box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
     0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
     0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);

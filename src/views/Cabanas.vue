@@ -12,7 +12,7 @@
       </div>
 
       <div class="cards">
-        <div v-for="c in cabins" :key="c.id" id="card-cat">
+        <div v-for="c in cabins" :key="c.id" class="card-cat">
           <h3>{{ c.name }}</h3>
           <p>{{ c.description }}</p>
           <div id="columnas">
@@ -132,10 +132,14 @@ const cabins = [
   display: grid;
   gap: 1rem;
   margin-top: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-#card-cat {
+@media (min-width: 1024px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+.card-cat {
   border-radius: 0.5rem;
   padding: 1rem;
   background-color: #d0fdd7;
@@ -144,23 +148,23 @@ const cabins = [
     0 8px 10px -6px rgba(0 0 0 / 0.1);
 }
 
-#card-cat h3 {
+.card-cat h3 {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-#card-cat p {
+.card-cat p {
   margin-bottom: 1rem;
   font-size: 18px;
 }
 
-#card-cat span {
+.card-cat span {
   margin-right: 1rem;
   display: inline-block;
 }
 
-#card-cat .btn-1 {
+.card-cat .btn-1 {
   background-color: green;
   color: white;
   padding-top: 0.5rem;
